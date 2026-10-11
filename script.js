@@ -47,7 +47,7 @@ const TEXTS = {
     "about.f4.v": "Mathematik (Spezial), Informatik",
 
     "projects.title": "Projekte",
-    "projects.intro": "Alle meine Projekte sind in Python geschrieben.",
+    "projects.intro": "Meine Projekte schreibe ich in Python mit Pygame. Ein Klick auf ein Projekt öffnet das Repository auf GitHub.",
     "p1.name": "Conways Game of Life",
     "p1.desc": "Simulation des bekannten zellulären Automaten: Zellen leben, sterben und entstehen nach einfachen Regeln.",
     "p2.name": "Perlin Noise Map",
@@ -137,7 +137,7 @@ const TEXTS = {
     "about.f4.v": "Mathematics (special), computer science",
 
     "projects.title": "Projects",
-    "projects.intro": "All of my projects are written in Python.",
+    "projects.intro": "I write my projects in Python with Pygame. Click a project to open its repository on GitHub.",
     "p1.name": "Conway's Game of Life",
     "p1.desc": "A simulation of the well-known cellular automaton: cells live, die and are born according to simple rules.",
     "p2.name": "Perlin Noise Map",
