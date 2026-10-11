@@ -78,7 +78,7 @@ render();
 /* Game of Life im Hintergrund */
 const canvas = document.getElementById("life");
 const ctx = canvas ? canvas.getContext("2d") : null;
-const SIZE = 12;
+const SIZE = 14;
 let cols, rows, grid;
 
 function seed() {
@@ -91,7 +91,7 @@ function seed() {
 function draw() {
   if (!ctx) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.globalAlpha = 0.28;
+  ctx.globalAlpha = 0.16;
   ctx.fillStyle = getComputedStyle(root).getPropertyValue("--accent");
   for (let y = 0; y < rows; y++)
     for (let x = 0; x < cols; x++)
