@@ -33,7 +33,7 @@ const EN = {
   h_contact: "Contact",
   contact: "You can find ways to reach me on a separate page.",
   contact_btn: "Go to contact page",
-  c_back: "Back to home", c_title: "Contact", c_intro: "Write to me or have a look at my profiles.", c_mail: "Email",
+  c_home: "Richard Mack", c_title: "Contact", c_intro: "Write to me or have a look at my profiles.", c_mail: "Email",
   theme_dark: "Dark", theme_light: "Light"
 };
 const DE_THEME = { theme_dark: "Dunkel", theme_light: "Hell" };
@@ -91,7 +91,7 @@ function seed() {
 function draw() {
   if (!ctx) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.globalAlpha = 0.16;
+  ctx.globalAlpha = 0.2;
   ctx.fillStyle = getComputedStyle(root).getPropertyValue("--accent");
   for (let y = 0; y < rows; y++)
     for (let x = 0; x < cols; x++)
