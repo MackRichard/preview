@@ -31,8 +31,9 @@ const EN = {
   h_friends: "Friends",
   friends_intro: "These people have their own websites too:",
   h_contact: "Contact",
-  contact: "The best way to reach me is through GitHub.",
-  to_top: "Back to top",
+  contact: "You can find ways to reach me on a separate page.",
+  contact_btn: "Go to contact page",
+  c_back: "Back to home", c_title: "Contact", c_intro: "Write to me or have a look at my profiles.", c_mail: "Email",
   theme_dark: "Dark", theme_light: "Light"
 };
 const DE_THEME = { theme_dark: "Dunkel", theme_light: "Hell" };
@@ -76,7 +77,7 @@ render();
 
 /* Game of Life im Hintergrund */
 const canvas = document.getElementById("life");
-const ctx = canvas.getContext("2d");
+const ctx = canvas ? canvas.getContext("2d") : null;
 const SIZE = 12;
 let cols, rows, grid;
 
@@ -88,8 +89,10 @@ function seed() {
 }
 
 function draw() {
+  if (!ctx) return;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = getComputedStyle(root).getPropertyValue("--line");
+  ctx.globalAlpha = 0.28;
+  ctx.fillStyle = getComputedStyle(root).getPropertyValue("--accent");
   for (let y = 0; y < rows; y++)
     for (let x = 0; x < cols; x++)
       if (grid[y][x]) ctx.fillRect(x * SIZE + 1, y * SIZE + 1, SIZE - 2, SIZE - 2);
@@ -109,9 +112,9 @@ function step() {
   grid = next;
 }
 
-seed(); draw();
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (ctx) { seed(); draw(); }
+if (ctx && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
   setInterval(() => { step(); draw(); }, 160);
 }
 let resizeTimer;
-addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { seed(); draw(); }, 200); });
+if (ctx) addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { seed(); draw(); }, 200); });
