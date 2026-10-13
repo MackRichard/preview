@@ -288,10 +288,15 @@
                   <button type="button" class="map-tab" data-view="world" aria-pressed="true" data-i18n="visit.world">Welt</button>
                   <button type="button" class="map-tab" data-view="europe" aria-pressed="false" data-i18n="visit.europe">Europa</button>
                 </div>
-                <svg id="map" role="img" aria-label="Karte: besuchte Länder sind markiert. Die Liste darunter nennt sie alle." data-i18n-label="visit.map" viewBox="0 6 360 142" preserveAspectRatio="xMidYMid meet">
+                <svg id="map" role="img" aria-label="Karte: besuchte Länder und Wunschziele sind farbig markiert. Die Listen darunter nennen sie alle." data-i18n-label="visit.map" viewBox="0 6 360 142" preserveAspectRatio="xMidYMid meet">
                   <path id="map-land" class="land"></path>
+                  <path id="map-wish" class="wish"></path>
                   <path id="map-seen" class="seen"></path>
                 </svg>
+                <ul class="map-legend">
+                  <li><span class="swatch swatch-seen" aria-hidden="true"></span><span data-i18n="map.seen">Besucht</span></li>
+                  <li><span class="swatch swatch-wish" aria-hidden="true"></span><span data-i18n="map.wish">Wunschziele</span></li>
+                </ul>
               </div>
 
               <dl class="regions">
@@ -306,6 +311,10 @@
                 <div>
                   <dt data-i18n="reg3">Südeuropa</dt>
                   <dd><ul class="chips"><li data-i18n="c.pt">Portugal</li><li data-i18n="c.es">Spanien</li><li data-i18n="c.it">Italien</li></ul></dd>
+                </div>
+                <div>
+                  <dt data-i18n="reg4">Wunschländer</dt>
+                  <dd><ul class="chips chips-wish"><li data-i18n="c.id">Indonesien</li><li data-i18n="c.pe">Peru</li><li data-i18n="c.us">USA</li><li data-i18n="c.be">Belgien</li></ul></dd>
                 </div>
               </dl>
             </div>
