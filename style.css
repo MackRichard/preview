@@ -834,7 +834,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
 .reveal.in {
   filter: none;
   /* Betreten des Bildschirms: ruhig scharf werden */
-  transition: filter 0.9s ease-out var(--d, 0ms);
+  transition: filter 0.8s ease-out var(--d, 0ms);
 }
 
 @media (prefers-reduced-motion: reduce) {
