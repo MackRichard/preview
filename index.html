@@ -1,222 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dein Name – Persönliche Website</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Richard Mack – Portfolio zu Informatik, Mathematik und eigenen Projekten.">
+<meta name="theme-color" content="#f4efdf">
+<title>Richard Mack — Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
+<header class="header">
+  <a class="brand" href="#top">Richard Mack<span>.</span></a>
+  <nav aria-label="Navigation">
+    <a href="#about" data-de="Über mich" data-en="About">Über mich</a>
+    <a href="#projects" data-de="Projekte" data-en="Projects">Projekte</a>
+    <a href="#skills" data-de="Skills" data-en="Skills">Skills</a>
+    <a href="#journey" data-de="Mein Weg" data-en="My journey">Mein Weg</a>
+    <a href="#contact" data-de="Kontakt" data-en="Contact">Kontakt</a>
+  </nav>
+  <button id="languageToggle" type="button" aria-label="Switch language to English">EN</button>
+</header>
 
-  <!-- Tastatur-Navigation (Accessibility) -->
-  <a href="#main" class="skip">Zum Inhalt springen</a>
+<main id="top">
+<section class="hero wrap">
+  <p class="greeting" id="greeting">Schön, dass du da bist.</p>
+  <h1 data-de="Ich bin Richard." data-en="I’m Richard.">Ich bin Richard.</h1>
+  <p class="intro" data-de="Schüler, Programmierer und MINT-Enthusiast. Ich beschäftige mich mit Informatik und Mathematik und setze eigene Ideen in Code um." data-en="Student, programmer and STEM enthusiast. I explore computer science and mathematics and turn my ideas into code.">Schüler, Programmierer und MINT-Enthusiast. Ich beschäftige mich mit Informatik und Mathematik und setze eigene Ideen in Code um.</p>
+  <div class="hero-actions"><a class="button dark" href="#projects" data-de="Projekte ansehen" data-en="View projects">Projekte ansehen</a><a class="plain-link" href="https://github.com/MackRichard" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  <div class="quick-facts"><span>Andreas Gymnasium · Q1</span><span data-de="Abitur 2028" data-en="Abitur 2028">Abitur 2028</span><span>MINT</span></div>
+</section>
 
-  <!-- Kopfleiste / Header -->
-  <header class="site-header">
-    <div class="wrap bar">
-      <a href="index.html" class="brand">Dein Name</a>
-
-      <nav class="nav">
-        <a href="#about" class="active">Über mich</a>
-        <a href="#projects">Projekte</a>
-        <a href="#skills">Fähigkeiten</a>
-        <a href="#timeline">Weg</a>
-        <a href="kontakt.html">Kontakt</a> <!-- Beispiel für spätere Unterseite -->
-      </nav>
-
-      <div class="controls">
-        <button class="ctl lang-ctl" aria-label="Sprache wechseln" id="lang-toggle">
-          <span data-l="de" class="on">DE</span>
-          <span class="sep">|</span>
-          <span data-l="en">EN</span>
-        </button>
-        <button class="ctl theme-ctl" id="theme-toggle" aria-label="Design umschalten">
-          <span class="icon-moon">🌙</span>
-          <span class="icon-sun">☀️</span>
-        </button>
-      </div>
+<section class="section wrap" id="about">
+  <h2 data-de="Über mich" data-en="About me">Über mich</h2>
+  <div class="about">
+    <div>
+      <p class="lead" data-de="Mich reizt es, Ideen aus Mathematik und Informatik in funktionierende Programme zu verwandeln." data-en="I enjoy turning ideas from mathematics and computer science into working programs.">Mich reizt es, Ideen aus Mathematik und Informatik in funktionierende Programme zu verwandeln.</p>
+      <p class="muted" data-de="Ich lerne gerne, indem ich Dinge selbst baue: von kleinen Simulationen bis zu Experimenten mit Algorithmen. Besonders interessieren mich die Grundlagen hinter Software und die Frage, wie aus einer Idee ein funktionierendes Projekt wird. Außerdem interessiere ich mich für Jugend forscht und eigene wissenschaftlich-technische Fragestellungen." data-en="I like learning by building things myself, from small simulations to algorithm experiments. I’m especially interested in the principles behind software and how ideas become working projects. I’m also interested in Jugend forscht and exploring my own scientific and technical questions.">Ich lerne gerne, indem ich Dinge selbst baue: von kleinen Simulationen bis zu Experimenten mit Algorithmen. Besonders interessieren mich die Grundlagen hinter Software und die Frage, wie aus einer Idee ein funktionierendes Projekt wird. Außerdem interessiere ich mich für Jugend forscht und eigene wissenschaftlich-technische Fragestellungen.</p>
     </div>
-  </header>
+    <dl class="facts">
+      <div><dt data-de="Aktuelle Stufe" data-en="Current year">Aktuelle Stufe</dt><dd data-de="11. Klasse · Q1" data-en="Grade 11 · Q1">11. Klasse · Q1</dd></div>
+      <div><dt>Abitur</dt><dd>2028</dd></div>
+      <div><dt data-de="Schwerpunkt" data-en="Focus">Schwerpunkt</dt><dd data-de="MINT seit Klasse 5" data-en="STEM since grade 5">MINT seit Klasse 5</dd></div>
+      <div><dt data-de="Leistungskurse" data-en="Advanced courses">Leistungskurse</dt><dd data-de="Mathematik und Informatik" data-en="Mathematics and computer science">Mathematik und Informatik</dd></div>
+    </dl>
+  </div>
+</section>
 
-  <!-- Hauptinhalt -->
-  <main id="main">
+<section class="section tinted" id="projects"><div class="wrap">
+  <h2 data-de="Projekte" data-en="Projects">Projekte</h2>
+  <p class="section-intro" data-de="Eigene Experimente, Programmierprojekte und Ideen, die ich weiterentwickeln möchte." data-en="Personal experiments, coding projects and ideas I want to develop further.">Eigene Experimente, Programmierprojekte und Ideen, die ich weiterentwickeln möchte.</p>
+  <div class="projects">
+    <!-- Ersetze REPOSITORY-NAME-HIER-EINTRAGEN durch den Namen des jeweiligen GitHub-Repositories. -->
+    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
+      <div class="project-type" data-de="Simulation" data-en="Simulation">Simulation</div><h3>Conway’s Game of Life <span>↗</span></h3>
+      <p data-de="Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen." data-en="An implementation of the cellular automaton, where a few rules can create complex patterns.">Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen.</p><div class="tags"><span>Python</span><span>Pygame</span></div>
+    </a>
+    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
+      <div class="project-type" data-de="Geplantes Projekt" data-en="Planned project">Geplantes Projekt</div><h3 data-de="Eigene Programmiersprache" data-en="My own programming language">Eigene Programmiersprache <span>↗</span></h3>
+      <p data-de="Ein geplantes Langzeitprojekt: eine eigene Sprache auf Python-Basis, von der Syntax bis zur Ausführung." data-en="A planned long-term project: a language based on Python, from syntax to execution.">Ein geplantes Langzeitprojekt: eine eigene Sprache auf Python-Basis, von der Syntax bis zur Ausführung.</p><div class="tags"><span>Python</span><span>Language design</span></div>
+    </a>
+    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
+      <div class="project-type" data-de="Prozedurale Generierung" data-en="Procedural generation">Prozedurale Generierung</div><h3>Perlin-Noise-Map <span>↗</span></h3>
+      <p data-de="Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt." data-en="A map using Perlin noise to create organic structures and varied landscapes.">Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt.</p><div class="tags"><span>Python</span><span data-de="Algorithmen" data-en="Algorithms">Algorithmen</span></div>
+    </a>
+    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
+      <div class="project-type" data-de="Interaktives Projekt" data-en="Interactive project">Interaktives Projekt</div><h3 data-de="Roulette" data-en="Roulette">Roulette <span>↗</span></h3>
+      <p data-de="Eine selbst programmierte Roulette-Anwendung als Übung für Spielabläufe, Logik und Zufall." data-en="A self-programmed roulette application to practise game flow, logic and randomness.">Eine selbst programmierte Roulette-Anwendung als Übung für Spielabläufe, Logik und Zufall.</p><div class="tags"><span>Python</span><span data-de="Logik" data-en="Logic">Logik</span></div>
+    </a>
+    <div class="project project-note"><div class="project-type">MINT</div><h3>Jugend forscht</h3><p data-de="Ich interessiere mich für Jugend forscht und möchte zukünftig eigene wissenschaftlich-technische Fragen untersuchen." data-en="I’m interested in Jugend forscht and hope to explore my own scientific and technical questions in the future.">Ich interessiere mich für Jugend forscht und möchte zukünftig eigene wissenschaftlich-technische Fragen untersuchen.</p><small data-de="Idee für die Zukunft" data-en="Future idea">Idee für die Zukunft</small></div>
+  </div>
+</div></section>
 
-    <!-- Startbereich / Hero -->
-    <section class="hero">
-      <canvas id="life"></canvas>
-      <div class="wrap hero-inner">
-        <p class="hero-role">Webentwickler &amp; Designer</p>
-        <h1>Hallo, ich bin Dein Name.</h1>
-        <p class="hero-lead">Ich erstelle moderne Webanwendungen, digitale Erlebnisse und erstklassige Benutzeroberflächen.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary go">Projekte ansehen</a>
-          <a href="#contact" class="btn go go-down">Kontakt aufnehmen</a>
-        </div>
-        <p class="hero-hint">Im Hintergrund läuft ein interaktives Game of Life.</p>
-      </div>
-    </section>
+<section class="section wrap" id="skills">
+  <h2 data-de="Technologien & Tools" data-en="Technologies & tools">Technologien & Tools</h2>
+  <div class="skill-columns">
+    <div><h3 data-de="Programmiersprachen & Frameworks" data-en="Programming languages & frameworks">Programmiersprachen & Frameworks</h3><ul class="link-list">
+      <li><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python <span>↗</span></a></li>
+      <li><a href="https://www.pygame.org/" target="_blank" rel="noopener noreferrer">Pygame <span>↗</span></a></li>
+      <li><a href="https://www.java.com/" target="_blank" rel="noopener noreferrer">Java <span>↗</span></a></li>
+      <li><a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">SQL <span>↗</span></a></li>
+    </ul></div>
+    <div><h3>Tools</h3><ul class="link-list">
+      <li><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git <span>↗</span></a></li>
+      <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></li>
+      <li><a href="https://desktop.github.com/" target="_blank" rel="noopener noreferrer">GitHub Desktop <span>↗</span></a></li>
+      <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code <span>↗</span></a></li>
+      <li><a href="https://www.bluej.org/" target="_blank" rel="noopener noreferrer">BlueJ <span>↗</span></a></li>
+    </ul></div>
+  </div>
+</section>
 
-    <div class="wrap">
+<section class="section tinted" id="journey"><div class="wrap">
+  <h2 data-de="Mein Weg" data-en="My journey">Mein Weg</h2>
+  <p class="section-intro" data-de="Stationen aus Bildung und bisherigen Erfahrungen – chronologisch geordnet." data-en="Education and experience, in chronological order.">Stationen aus Bildung und bisherigen Erfahrungen – chronologisch geordnet.</p>
+  <ol class="timeline">
+    <li><time data-de="Klasse 1–4" data-en="Grades 1–4">Klasse 1–4</time><div><h3>KreativitätsGrundschule Berlin Friedrichshain</h3><p data-de="Grundschulzeit mit besonderem Fokus auf Kreativität." data-en="Primary school with a special focus on creativity.">Grundschulzeit mit besonderem Fokus auf Kreativität.</p></div></li>
+    <li><time data-de="Seit Klasse 5" data-en="Since grade 5">Seit Klasse 5</time><div><h3>Andreas Gymnasium Berlin Friedrichshain · MINT</h3><p data-de="Seit Klasse 5 am Gymnasium mit MINT-Profil. Aktuell 11. Klasse (Q1); Leistungskurse: Spezialleistungskurs Mathematik und Informatik." data-en="At the school since grade 5 with a STEM focus. Currently in grade 11 (Q1); advanced courses: mathematics and computer science.">Seit Klasse 5 am Gymnasium mit MINT-Profil. Aktuell 11. Klasse (Q1); Leistungskurse: Spezialleistungskurs Mathematik und Informatik.</p></div></li>
+    <li><time>April 2025</time><div><h3 data-de="Praktikum am dEIn-Labor · TU Berlin" data-en="Internship at dEIn-Labor · TU Berlin">Praktikum am dEIn-Labor · TU Berlin</h3><p data-de="Einblicke in Elektrotechnik und Informatik im Labor der TU Berlin." data-en="Insights into electrical engineering and computer science at TU Berlin’s lab.">Einblicke in Elektrotechnik und Informatik im Labor der TU Berlin.</p></div></li>
+    <li><time>2026–2027</time><div><h3 data-de="Oberstufe · Q1" data-en="Upper secondary · Q1">Oberstufe · Q1</h3><p data-de="MINT-Profil mit Spezialleistungskursen Mathematik und Informatik." data-en="STEM focus with advanced courses in mathematics and computer science.">MINT-Profil mit Spezialleistungskursen Mathematik und Informatik.</p></div></li>
+    <li><time data-de="Sommer 2027" data-en="Summer 2027">Sommer 2027</time><div><h3>Latinum</h3><p data-de="Geplant nach Lateinunterricht von Klasse 7 bis einschließlich Klasse 11." data-en="Expected after studying Latin from grade 7 through grade 11.">Geplant nach Lateinunterricht von Klasse 7 bis einschließlich Klasse 11.</p></div></li>
+    <li><time>2028</time><div><h3>Abitur</h3><p data-de="Geplanter Schulabschluss am Andreas Gymnasium Berlin Friedrichshain." data-en="Expected school-leaving qualification at Andreas Gymnasium Berlin Friedrichshain.">Geplanter Schulabschluss am Andreas Gymnasium Berlin Friedrichshain.</p></div></li>
+  </ol>
+</div></section>
 
-      <!-- Über mich -->
-      <section id="about" class="section reveal">
-        <h2>Über mich</h2>
-        <div class="prose">
-          <p>Ich begeistere mich für sauberen Code, durchdachtes Design und performante Webtechnologien. Hier findest du einen Überblick über meine Arbeit und Interessen.</p>
-          
-          <dl class="facts">
-            <div>
-              <dt>Standort</dt>
-              <dd>Berlin, Deutschland</dd>
-            </div>
-            <div>
-              <dt>Fokus</dt>
-              <dd>Frontend &amp; UX Design</dd>
-            </div>
-            <div>
-              <dt>Erfahrung</dt>
-              <dd><span class="num">5+</span> Jahre Entwicklung</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
+<section class="section wrap" id="languages">
+  <h2 data-de="Sprachen" data-en="Languages">Sprachen</h2>
+  <div class="language-list">
+    <div><h3 data-de="Deutsch" data-en="German">Deutsch</h3><p data-de="Muttersprache" data-en="Native">Muttersprache</p></div>
+    <div><h3 data-de="Englisch" data-en="English">Englisch</h3><p data-de="Sehr gute Kenntnisse · Cambridge-Zertifikat in Vorbereitung" data-en="Very good · Preparing for a Cambridge certificate">Sehr gute Kenntnisse · Cambridge-Zertifikat in Vorbereitung</p></div>
+    <div><h3 data-de="Niederländisch" data-en="Dutch">Niederländisch</h3><p data-de="Ich kann mich im Alltag verständigen." data-en="Able to communicate in everyday situations.">Ich kann mich im Alltag verständigen.</p></div>
+    <div><h3 data-de="Latein" data-en="Latin">Latein</h3><p data-de="Übersetzen · Unterricht von Klasse 7 bis 11 · Latinum voraussichtlich Sommer 2027" data-en="Translation · Studied from grades 7 to 11 · Latinum expected in summer 2027">Übersetzen · Unterricht von Klasse 7 bis 11 · Latinum voraussichtlich Sommer 2027</p></div>
+  </div>
+</section>
 
-      <!-- Projekte -->
-      <section id="projects" class="section reveal">
-        <h2>Projekte</h2>
-        <div>
-          <ul class="projects">
-            <li>
-              <a href="#" class="project-link" target="_blank" rel="noopener">
-                <h3>Portfolio Website</h3>
-                <p>Eine minimalistische, performante Website mit adaptivem Dark Mode und interaktivem Canvas-Hintergrund.</p>
-                <ul class="chips">
-                  <li>HTML5</li>
-                  <li>CSS3</li>
-                  <li>JavaScript</li>
-                  <li class="chip-soft">Responsive</li>
-                </ul>
-              </a>
-            </li>
-            <li>
-              <div class="project-static">
-                <h3>Web-Applikation Dashboard</h3>
-                <p>Ein internes Analyse-Tool zur Erfassung und Visualisierung von Datenströmen in Echtzeit.</p>
-                <ul class="chips">
-                  <li>React</li>
-                  <li>TypeScript</li>
-                  <li>Tailwind</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+<section class="section tinted" id="interests"><div class="wrap">
+  <h2 data-de="Interessen & Errungenschaften" data-en="Interests & milestones">Interessen & Errungenschaften</h2>
+  <div class="interest-list">
+    <a class="interest-row" href="https://www.duolingo.com/profile/DEIN-DUOLINGO-BENUTZERNAME" target="_blank" rel="noopener noreferrer"><span data-de="Duolingo-Streak" data-en="Duolingo streak">Duolingo-Streak</span><strong class="warm" data-de="1.100+ Tage" data-en="1,100+ days">1.100+ Tage</strong><b>↗</b></a>
+    <div class="interest-row"><span data-de="Lieblingshobby" data-en="Favourite hobby">Lieblingshobby</span><strong data-de="Spazieren gehen" data-en="Going for walks">Spazieren gehen</strong><span></span></div>
+    <div class="interest-row"><span data-de="Lieblingskünstler" data-en="Favourite artist">Lieblingskünstler</span><strong>Kendrick Lamar <small class="warm" data-de="45.000+ Minuten gestreamt" data-en="45,000+ minutes streamed">45.000+ Minuten gestreamt</small></strong><span></span></div>
+    <div class="interest-row"><span data-de="Lieblingsalbum" data-en="Favourite album">Lieblingsalbum</span><strong>DAMN. <small data-de="7.500+ Minuten gestreamt" data-en="7,500+ minutes streamed">7.500+ Minuten gestreamt</small></strong><span></span></div>
+    <div class="interest-row"><span data-de="Nächstes großes Ziel" data-en="Next big goal">Nächstes großes Ziel</span><strong data-de="Von Berlin nach Potsdam wandern" data-en="Hike from Berlin to Potsdam">Von Berlin nach Potsdam wandern</strong><span></span></div>
+  </div>
+  <div class="currently"><h3 data-de="Aktuell" data-en="Currently">Aktuell</h3><ul>
+    <li data-de="Ich lerne Niederländisch und Portugiesisch." data-en="I am learning Dutch and Portuguese.">Ich lerne Niederländisch und Portugiesisch.</li>
+    <li data-de="Ich arbeite an meiner Website und größeren Projekten." data-en="I am working on my website and larger projects.">Ich arbeite an meiner Website und größeren Projekten.</li>
+    <li data-de="Ich denke über Schule und die nächsten Schritte nach." data-en="I am thinking about school and my next steps.">Ich denke über Schule und die nächsten Schritte nach.</li>
+  </ul></div>
+</div></section>
 
-      <!-- Fähigkeiten -->
-      <section id="skills" class="section reveal">
-        <h2>Fähigkeiten</h2>
-        <div class="skills">
-          <div>
-            <h3>Technologien &amp; Tools</h3>
-            <ul class="tiles">
-              <li>⚡ JavaScript (ES6+)</li>
-              <li>🎨 CSS3 / SCSS</li>
-              <li>⚛️ React / Next.js</li>
-              <li>🛠️ Git &amp; GitHub</li>
-              <li>📱 Responsive Design</li>
-              <li>♿ Barrierefreiheit (a11y)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+<section class="section wrap" id="friends">
+  <h2 data-de="Freunde & Netzwerk" data-en="Friends & network">Freunde & Netzwerk</h2>
+  <p class="section-intro" data-de="Die persönlichen Websites von Freunden." data-en="Personal websites by friends.">Die persönlichen Websites von Freunden.</p>
+  <div class="friend-list">
+    <a href="https://filiproessner.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer"><span>Filip Roessner</span><small>Personal Website</small><b>↗</b></a>
+    <a href="https://www.timhongphuc.de/" target="_blank" rel="noopener noreferrer"><span>Tim Hong Phuc</span><small>Personal Website</small><b>↗</b></a>
+    <a href="https://karl-grehn.vercel.app/" target="_blank" rel="noopener noreferrer"><span>Karl Grehn</span><small>Personal Website</small><b>↗</b></a>
+  </div>
+</section>
 
-      <!-- Mein Weg / Timeline -->
-      <section id="timeline" class="section reveal">
-        <h2>Mein Weg</h2>
-        <div>
-          <ol class="timeline">
-            <li class="current">
-              <div class="when">2023 – Heute</div>
-              <h3>Senior Frontend Entwickler</h3>
-              <p>Entwicklung und Optimierung komplexer Benutzeroberflächen für moderne Webanwendungen.</p>
-            </li>
-            <li>
-              <div class="when">2020 – 2023</div>
-              <h3>Webentwickler</h3>
-              <p>Umsetzung von Kundenprojekten, Fokussierung auf Performance, SEO und Benutzerfreundlichkeit.</p>
-            </li>
-            <li>
-              <div class="when">2017 – 2020</div>
-              <h3>Informatikstudium</h3>
-              <p>Schwerpunkte im Bereich Medieninformatik und Softwarearchitektur.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- Kontakt & Anonyme Nachricht -->
-      <section id="contact" class="section contact-page reveal">
-        <h2>Kontakt</h2>
-        <div>
-          <p class="note">Lass uns ins Gespräch kommen! Schreibe mir eine direkte E-Mail oder nutze das anonyme Formular unten.</p>
-          
-          <ul class="rows rows-links contact-list">
-            <li>
-              <a href="mailto:deine-adresse@example.com" class="go">
-                <span class="row-name">E-Mail</span>
-                <span class="row-meta">deine-adresse@example.com</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com" target="_blank" rel="noopener" class="go">
-                <span class="row-name">GitHub</span>
-                <span class="row-meta">@dein-username</span>
-              </a>
-            </li>
-          </ul>
-
-          <!-- Anonymes Formular -->
-          <div class="msg-panel">
-            <h2>Anonyme Nachricht senden</h2>
-            <p class="msg-sub">Hast du Feedback, ein Angebot oder Fragen? Du kannst mir hier direkt schreiben.</p>
-
-            <form id="anon-form">
-              <div class="msg-field">
-                <label for="msg-text">Deine Nachricht</label>
-                <textarea id="msg-text" required maxlength="1000" placeholder="Schreibe deine Nachricht hier..."></textarea>
-              </div>
-
-              <div class="msg-field">
-                <label for="msg-contact">Kontaktdaten (optional)</label>
-                <input type="text" id="msg-contact" placeholder="E-Mail oder Social Media Handle">
-              </div>
-
-              <div class="msg-foot">
-                <span class="msg-count"><span id="char-count">0</span> / 1000</span>
-                <button type="submit" id="msg-send" class="btn btn-primary">Nachricht senden</button>
-              </div>
-              <p class="msg-status" id="msg-status"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- Nach-Oben-Button -->
-  <button class="to-top" id="to-top" aria-label="Nach oben scrollen">↑</button>
-
-  <!-- Fußzeile -->
-  <footer class="site-footer">
-    <div class="wrap foot">
-      <p>&copy; 2026 Dein Name. Alle Rechte vorbehalten.</p>
-      <p>Ortszeit: <span class="clock" id="clock">00:00:00</span></p>
-    </div>
-  </footer>
-
-  <!-- Einbinden des JavaScripts -->
-  <script src="script.js"></script>
+<section class="contact" id="contact"><div class="wrap contact-inner">
+  <h2 data-de="Lass uns in Verbindung bleiben." data-en="Let’s stay in touch.">Lass uns in Verbindung bleiben.</h2>
+  <p data-de="Meine Projekte findest du auf GitHub. Weitere Profile sind hier verlinkt." data-en="You can find my projects on GitHub. Other profiles are linked here.">Meine Projekte findest du auf GitHub. Weitere Profile sind hier verlinkt.</p>
+  <div class="contact-links">
+    <a class="github" href="https://github.com/MackRichard" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <!-- Ersetze die Platzhalter-URLs durch deine tatsächlichen Profile. -->
+    <a href="https://www.linkedin.com/in/DEIN-LINKEDIN-PROFIL" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://www.instagram.com/DEIN-INSTAGRAM-PROFIL" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+  </div>
+</div></section>
+</main>
+<footer class="footer wrap"><span>Richard Mack</span><span>Berlin, Germany (CET / CEST)</span><span>© 2026 Richard Mack</span></footer>
 </body>
 </html>
