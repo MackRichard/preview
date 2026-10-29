@@ -27,21 +27,3 @@ function updateGreeting() {
 }
 toggle.addEventListener("click", () => setLanguage(language === "de" ? "en" : "de"));
 setLanguage(language);
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Duolingo Streak Auto-Increment (Basierend auf Startdatum 29.10.2026 = 1130 Tage)
-    const baseDate = new Date("2026-10-29T00:00:00");
-    const baseStreak = 1130;
-    
-    const today = new Date();
-    // Berechnung des Tagesunterschieds
-    const diffTime = today - baseDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    
-    const currentStreak = baseStreak + (diffDays > 0 ? diffDays : 0);
-    
-    const streakElement = document.getElementById("duolingo-streak");
-    if (streakElement) {
-        streakElement.textContent = `${currentStreak} Tage Streak`;
-    }
-});
