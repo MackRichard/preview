@@ -24,7 +24,6 @@
 
 <main id="top">
 <section class="hero wrap">
-  <p class="greeting" id="greeting">Schön, dass du da bist.</p>
   <h1 data-de="Ich bin Richard." data-en="I’m Richard.">Ich bin Richard.</h1>
   <p class="intro" data-de="Schüler, Programmierer und MINT-Enthusiast. Ich beschäftige mich mit Informatik und Mathematik und setze eigene Ideen in Code um." data-en="Student, programmer and STEM enthusiast. I explore computer science and mathematics and turn my ideas into code.">Schüler, Programmierer und MINT-Enthusiast. Ich beschäftige mich mit Informatik und Mathematik und setze eigene Ideen in Code um.</p>
   <div class="hero-actions"><a class="button dark" href="#projects" data-de="Projekte ansehen" data-en="View projects">Projekte ansehen</a><a class="plain-link" href="https://github.com/MackRichard" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
@@ -51,25 +50,79 @@
   <h2 data-de="Projekte" data-en="Projects">Projekte</h2>
   <p class="section-intro" data-de="Eigene Experimente, Programmierprojekte und Ideen, die ich weiterentwickeln möchte." data-en="Personal experiments, coding projects and ideas I want to develop further.">Eigene Experimente, Programmierprojekte und Ideen, die ich weiterentwickeln möchte.</p>
   <div class="projects">
-    <!-- Ersetze REPOSITORY-NAME-HIER-EINTRAGEN durch den Namen des jeweiligen GitHub-Repositories. -->
-    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
-      <div class="project-type" data-de="Simulation" data-en="Simulation">Simulation</div><h3>Conway’s Game of Life <span>↗</span></h3>
-      <p data-de="Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen." data-en="An implementation of the cellular automaton, where a few rules can create complex patterns.">Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen.</p><div class="tags"><span>Python</span><span>Pygame</span></div>
-    </a>
-    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
-      <div class="project-type" data-de="Geplantes Projekt" data-en="Planned project">Geplantes Projekt</div><h3 data-de="Eigene Programmiersprache" data-en="My own programming language">Eigene Programmiersprache <span>↗</span></h3>
-      <p data-de="Ein geplantes Langzeitprojekt: eine eigene Sprache auf Python-Basis, von der Syntax bis zur Ausführung." data-en="A planned long-term project: a language based on Python, from syntax to execution.">Ein geplantes Langzeitprojekt: eine eigene Sprache auf Python-Basis, von der Syntax bis zur Ausführung.</p><div class="tags"><span>Python</span><span>Language design</span></div>
-    </a>
-    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
-      <div class="project-type" data-de="Prozedurale Generierung" data-en="Procedural generation">Prozedurale Generierung</div><h3>Perlin-Noise-Map <span>↗</span></h3>
-      <p data-de="Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt." data-en="A map using Perlin noise to create organic structures and varied landscapes.">Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt.</p><div class="tags"><span>Python</span><span data-de="Algorithmen" data-en="Algorithms">Algorithmen</span></div>
-    </a>
-    <a class="project" href="https://github.com/MackRichard/REPOSITORY-NAME-HIER-EINTRAGEN" target="_blank" rel="noopener noreferrer">
-      <div class="project-type" data-de="Interaktives Projekt" data-en="Interactive project">Interaktives Projekt</div><h3 data-de="Roulette" data-en="Roulette">Roulette <span>↗</span></h3>
-      <p data-de="Eine selbst programmierte Roulette-Anwendung als Übung für Spielabläufe, Logik und Zufall." data-en="A self-programmed roulette application to practise game flow, logic and randomness.">Eine selbst programmierte Roulette-Anwendung als Übung für Spielabläufe, Logik und Zufall.</p><div class="tags"><span>Python</span><span data-de="Logik" data-en="Logic">Logik</span></div>
-    </a>
-    <div class="project project-note"><div class="project-type">MINT</div><h3>Jugend forscht</h3><p data-de="Ich interessiere mich für Jugend forscht und möchte zukünftig eigene wissenschaftlich-technische Fragen untersuchen." data-en="I’m interested in Jugend forscht and hope to explore my own scientific and technical questions in the future.">Ich interessiere mich für Jugend forscht und möchte zukünftig eigene wissenschaftlich-technische Fragen untersuchen.</p><small data-de="Idee für die Zukunft" data-en="Future idea">Idee für die Zukunft</small></div>
-  </div>
+
+  <!-- Conway's Game of Life -->
+  <a class="project"
+     href="https://github.com/MackRichard/Conways-Game-of-Life"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <div class="project-type"
+         data-de="Simulation"
+         data-en="Simulation">Simulation</div>
+
+    <h3>Conway’s Game of Life <span>↗</span></h3>
+
+    <p
+      data-de="Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen."
+      data-en="An implementation of the cellular automaton, where a few rules can create complex patterns.">
+      Eine Umsetzung des zellulären Automaten, bei dem aus wenigen Regeln komplexe Muster entstehen.
+    </p>
+
+    <div class="tags">
+      <span>Python</span>
+      <span>Pygame</span>
+    </div>
+  </a>
+
+
+  <!-- Perlin Noise Map -->
+  <a class="project"
+     href="https://github.com/MackRichard/Perlin-Noise-Map"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <div class="project-type"
+         data-de="Prozedurale Generierung"
+         data-en="Procedural generation">Prozedurale Generierung</div>
+
+    <h3>Perlin-Noise-Map <span>↗</span></h3>
+
+    <p
+      data-de="Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt."
+      data-en="A map using Perlin noise to create organic structures and varied landscapes.">
+      Eine Karte, die mit Perlin Noise organische Strukturen und abwechslungsreiche Landschaften erzeugt.
+    </p>
+
+    <div class="tags">
+      <span>Python</span>
+    </div>
+  </a>
+
+
+  <!-- Roulette -->
+  <a class="project"
+     href="https://github.com/MackRichard/Roulette"
+     target="_blank"
+     rel="noopener noreferrer">
+
+    <div class="project-type"
+         data-de="Interaktives Projekt"
+         data-en="Interactive project">Interaktives Projekt</div>
+
+    <h3>Roulette <span>↗</span></h3>
+
+    <p
+      data-de="Eine selbst programmierte Roulette-Anwendung für Spielabläufe und Zufall – vollständig ohne den Einsatz von KI entwickelt."
+      data-en="A self-programmed roulette application for game flow and randomness, developed entirely without using AI.">
+      Eine selbst programmierte Roulette-Anwendung für Spielabläufe und Zufall – vollständig ohne den Einsatz von KI entwickelt.
+    </p>
+
+    <div class="tags">
+      <span>Python</span>
+    </div>
+  </a>
+
 </div></section>
 
 <section class="section wrap" id="skills">
@@ -114,29 +167,87 @@
   </div>
 </section>
 
-<section class="section tinted" id="interests"><div class="wrap">
-  <h2 data-de="Interessen & Errungenschaften" data-en="Interests & milestones">Interessen & Errungenschaften</h2>
-  <div class="interest-list">
-    <a class="interest-row" href="https://www.duolingo.com/profile/DEIN-DUOLINGO-BENUTZERNAME" target="_blank" rel="noopener noreferrer"><span data-de="Duolingo-Streak" data-en="Duolingo streak">Duolingo-Streak</span><strong class="warm" data-de="1.100+ Tage" data-en="1,100+ days">1.100+ Tage</strong><b>↗</b></a>
-    <div class="interest-row"><span data-de="Lieblingshobby" data-en="Favourite hobby">Lieblingshobby</span><strong data-de="Spazieren gehen" data-en="Going for walks">Spazieren gehen</strong><span></span></div>
-    <div class="interest-row"><span data-de="Lieblingskünstler" data-en="Favourite artist">Lieblingskünstler</span><strong>Kendrick Lamar <small class="warm" data-de="45.000+ Minuten gestreamt" data-en="45,000+ minutes streamed">45.000+ Minuten gestreamt</small></strong><span></span></div>
-    <div class="interest-row"><span data-de="Lieblingsalbum" data-en="Favourite album">Lieblingsalbum</span><strong>DAMN. <small data-de="7.500+ Minuten gestreamt" data-en="7,500+ minutes streamed">7.500+ Minuten gestreamt</small></strong><span></span></div>
-    <div class="interest-row"><span data-de="Nächstes großes Ziel" data-en="Next big goal">Nächstes großes Ziel</span><strong data-de="Von Berlin nach Potsdam wandern" data-en="Hike from Berlin to Potsdam">Von Berlin nach Potsdam wandern</strong><span></span></div>
-  </div>
-  <div class="currently"><h3 data-de="Aktuell" data-en="Currently">Aktuell</h3><ul>
-    <li data-de="Ich lerne Niederländisch und Portugiesisch." data-en="I am learning Dutch and Portuguese.">Ich lerne Niederländisch und Portugiesisch.</li>
-    <li data-de="Ich arbeite an meiner Website und größeren Projekten." data-en="I am working on my website and larger projects.">Ich arbeite an meiner Website und größeren Projekten.</li>
-    <li data-de="Ich denke über Schule und die nächsten Schritte nach." data-en="I am thinking about school and my next steps.">Ich denke über Schule und die nächsten Schritte nach.</li>
-  </ul></div>
-</div></section>
+<section class="section tinted" id="currently">
+  <div class="wrap">
 
-<section class="section wrap" id="friends">
-  <h2 data-de="Freunde & Netzwerk" data-en="Friends & network">Freunde & Netzwerk</h2>
-  <p class="section-intro" data-de="Die persönlichen Websites von Freunden." data-en="Personal websites by friends.">Die persönlichen Websites von Freunden.</p>
-  <div class="friend-list">
-    <a href="https://filiproessner.github.io/Personal-Website/" target="_blank" rel="noopener noreferrer"><span>Filip Roessner</span><small>Personal Website</small><b>↗</b></a>
-    <a href="https://www.timhongphuc.de/" target="_blank" rel="noopener noreferrer"><span>Tim Hong Phuc</span><small>Personal Website</small><b>↗</b></a>
-    <a href="https://karl-grehn.vercel.app/" target="_blank" rel="noopener noreferrer"><span>Karl Grehn</span><small>Personal Website</small><b>↗</b></a>
+    <h2 data-de="Aktuell" data-en="Currently">Aktuell</h2>
+
+    <div class="interest-list">
+
+      <!-- Duolingo -->
+      <a class="interest-row"
+         href="https://www.duolingo.com/profile/Richard_Mack"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <span
+          data-de="Duolingo-Streak"
+          data-en="Duolingo streak">
+          Duolingo-Streak
+        </span>
+
+        <strong class="warm" id="duolingoStreak">
+          1.129 Tage
+        </strong>
+
+        <b>↗</b>
+      </a>
+
+
+      <!-- Sprachen -->
+      <div class="interest-row">
+        <span
+          data-de="Sprachen"
+          data-en="Languages">
+          Sprachen
+        </span>
+
+        <strong
+          data-de="Ich lerne Niederländisch und Portugiesisch."
+          data-en="I am learning Dutch and Portuguese.">
+          Ich lerne Niederländisch und Portugiesisch.
+        </strong>
+
+        <span></span>
+      </div>
+
+
+      <!-- Projekte -->
+      <div class="interest-row">
+        <span
+          data-de="Projekte"
+          data-en="Projects">
+          Projekte
+        </span>
+
+        <strong
+          data-de="Ich arbeite an meiner Website und größeren Projekten."
+          data-en="I am working on my website and larger projects.">
+          Ich arbeite an meiner Website und größeren Projekten.
+        </strong>
+
+        <span></span>
+      </div>
+
+
+      <!-- Schule -->
+      <div class="interest-row">
+        <span
+          data-de="Schule"
+          data-en="School">
+          Schule
+        </span>
+
+        <strong
+          data-de="Ich denke über Schule und die nächsten Schritte nach."
+          data-en="I am thinking about school and my next steps.">
+          Ich denke über Schule und die nächsten Schritte nach.
+        </strong>
+
+        <span></span>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -146,8 +257,8 @@
   <div class="contact-links">
     <a class="github" href="https://github.com/MackRichard" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     <!-- Ersetze die Platzhalter-URLs durch deine tatsächlichen Profile. -->
-    <a href="https://www.linkedin.com/in/DEIN-LINKEDIN-PROFIL" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-    <a href="https://www.instagram.com/DEIN-INSTAGRAM-PROFIL" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    <a href="https://www.linkedin.com/in/richard-mack-788407442/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://www.instagram.com/richardmack161" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
   </div>
 </div></section>
 </main>
