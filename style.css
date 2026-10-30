@@ -120,3 +120,93 @@ a.project:hover { border-color: #a99568; }
   .friend-list b { grid-column: 2; grid-row: 1 / span 2; }
   .footer { flex-direction: column; align-items: flex-start; gap: 3px; }
 }
+
+/* Social Media Icons */
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #d8cfba;
+    border-radius: 50%;
+
+    background: #faf6eb;
+    color: #29271f;
+
+    text-decoration: none;
+}
+
+.contact-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.contact-icon:hover {
+    background: #eee5ce;
+    border-color: #84652b;
+}
+
+
+/* E-Mail */
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 22px;
+    padding: 11px 16px;
+
+    border: 1px solid #d8cfba;
+    border-radius: 6px;
+
+    color: #29271f;
+    background: #f4efdf;
+
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.contact-email svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.contact-email:hover {
+    background: #eee5ce;
+    border-color: #84652b;
+}
+
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .contact-icons {
+        gap: 20px;
+    }
+
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contact-email {
+        font-size: 13px;
+    }
+
+}
