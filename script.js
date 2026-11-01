@@ -1,161 +1,95 @@
-const languageToggle = document.getElementById("languageToggle");
+// Texte für Deutsch und Englisch
 
-let currentLanguage = "de";
+const translations = {
 
-// Gespeicherte Sprache laden
-try {
-    currentLanguage =
-        localStorage.getItem("richardPortfolioLanguage") === "en"
-            ? "en"
-            : "de";
-} catch (error) {
-    currentLanguage = "de";
-}
+    de: {
+        heading: "Testumgebung",
 
+        description:
+            "Diese Website ist eine separate Vorschau und wird zum Testen neuer Funktionen, Designs und Inhalte verwendet. Die hier gezeigten Inhalte können unvollständig sein oder sich jederzeit ändern.",
 
-// ======================================
-// DUOLINGO STREAK
-// ======================================
+        status: "Separate Testumgebung",
 
-// Dein bestätigter Wert am 30. Oktober 2026
-const STREAK_BASE = 1131;
+        homeButton: "Zur Hauptwebsite",
 
-// Datum des Basiswertes
-const STREAK_BASE_DATE = Date.UTC(2026, 9, 30);
+        footnote:
+            "Du befindest dich auf der Preview-Version, nicht auf dem regulären Portfolio."
+    },
 
+    en: {
+        heading: "Testing Environment",
 
-// Berechnet die aktuelle Streak anhand des Datums
-function getCurrentStreak() {
+        description:
+            "This website is a separate preview used to test new features, designs and content. The content displayed here may be incomplete or subject to change at any time.",
 
-    const now = new Date();
+        status: "Separate testing environment",
 
-    // Lokales Datum des Besuchers
-    const today = Date.UTC(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate()
-    );
+        homeButton: "Visit main website",
 
-    // Vergangene Kalendertage berechnen
-    const daysPassed = Math.floor(
-        (today - STREAK_BASE_DATE) / 86400000
-    );
-
-    return Math.max(0, STREAK_BASE + daysPassed);
-}
-
-
-// Zahl auf der Website aktualisieren
-function updateStreak() {
-
-    const streakElement =
-        document.getElementById("duolingoStreak");
-
-    if (!streakElement) return;
-
-    const streak = getCurrentStreak();
-
-    if (currentLanguage === "en") {
-
-        streakElement.textContent =
-            streak.toLocaleString("en-US") + " days";
-
-    } else {
-
-        streakElement.textContent =
-            streak.toLocaleString("de-DE") + " Tage";
-
+        footnote:
+            "You are currently viewing the preview version, not the regular portfolio."
     }
-}
+
+};
 
 
-// ======================================
-// SPRACHWECHSEL DE / EN
-// ======================================
+// Sprache ändern
 
 function setLanguage(language) {
 
-    currentLanguage = language;
+    const text = translations[language];
+
+    if (!text) return;
+
+    // Seitensprache ändern
 
     document.documentElement.lang = language;
 
-    document.querySelectorAll("[data-de][data-en]")
-        .forEach(element => {
+    // Texte aktualisieren
 
-            const translation =
-                language === "en"
-                    ? element.dataset.en
-                    : element.dataset.de;
+    document.getElementById("heading").textContent =
+        text.heading;
 
-            element.textContent = translation;
-        });
+    document.getElementById("description").textContent =
+        text.description;
+
+    document.getElementById("status-text").textContent =
+        text.status;
+
+    document.getElementById("home-button").textContent =
+        text.homeButton;
+
+    document.getElementById("footnote").textContent =
+        text.footnote;
 
 
-    languageToggle.textContent =
-        language === "de" ? "EN" : "DE";
+    // Aktiven Sprachbutton markieren
 
-    languageToggle.setAttribute(
-        "aria-label",
+    const deButton = document.getElementById("de-button");
+    const enButton = document.getElementById("en-button");
+
+    deButton.classList.toggle("active", language === "de");
+    enButton.classList.toggle("active", language === "en");
+
+    deButton.setAttribute(
+        "aria-pressed",
         language === "de"
-            ? "Switch language to English"
-            : "Sprache auf Deutsch wechseln"
     );
 
-    try {
-        localStorage.setItem(
-            "richardPortfolioLanguage",
-            language
-        );
-    } catch (error) {
-        // Die Seite funktioniert auch ohne localStorage.
-    }
+    enButton.setAttribute(
+        "aria-pressed",
+        language === "en"
+    );
 
-    updateStreak();
 }
 
 
-// Button für den Sprachwechsel
-languageToggle.addEventListener("click", () => {
+// Sprachbuttons verbinden
 
-    setLanguage(
-        currentLanguage === "de" ? "en" : "de"
-    );
-
+document.getElementById("de-button").addEventListener("click", () => {
+    setLanguage("de");
 });
 
-
-// Sprache beim ersten Laden einstellen
-setLanguage(currentLanguage);
-
-
-// ======================================
-// AUTOMATISCHE AKTUALISIERUNG UM MITTERNACHT
-// ======================================
-
-function scheduleStreakUpdate() {
-
-    const now = new Date();
-
-    const nextMidnight = new Date(
-        now.getFullYear(),
-        now.getMonth(),
-        now.getDate() + 1,
-        0,
-        0,
-        2
-    );
-
-    const timeUntilMidnight =
-        nextMidnight.getTime() - now.getTime();
-
-    window.setTimeout(() => {
-
-        updateStreak();
-
-        scheduleStreakUpdate();
-
-    }, timeUntilMidnight);
-
-}
-
-scheduleStreakUpdate();
+document.getElementById("en-button").addEventListener("click", () => {
+    setLanguage("en");
+});
